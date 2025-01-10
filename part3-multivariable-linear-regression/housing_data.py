@@ -11,7 +11,7 @@ import time
 print("Calidfornia housing dataset prediction.")
 california = fetch_california_housing()
 x, y = california.data, california.target
-# print(california)
+print(california)
 
 x = scale(x)
 y = scale(y)
@@ -42,7 +42,7 @@ sgdr = SGDRegressor().fit(xtrain, ytrain)
 end = time.time()
 print("Time to compute the model (in seconds): ", round((end-start), 3))
 coef = sgdr.coef_
-# print(coef)
+print(coef)
 print("Coefficients:")
 print("MedInc:", round(coef[0], 2))
 print("HouseAge:", round(coef[1], 2))
